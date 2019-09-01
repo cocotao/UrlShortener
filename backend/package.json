@@ -1,0 +1,23 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "main": "start.js",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mocha": "^6.2.0",
+    "mochawesome": "^4.0.1",
+    "mongoose": "^5.6.7",
+    "nyc": "^14.1.1",
+    "shortid": "^2.2.14",
+    "should": "^13.2.3",
+    "sinon": "^7.3.2",
+    "supertest": "^4.0.2",
+    "valid-url": "^1.0.9"
+  },
+  "scripts": {
+    "start": "node start.js ",
+    "test": "export NODE_ENV=test && nyc --reporter=lcov --reporter=text-summary mocha test/**/*.js --exit",
+    "mochawesome": "mocha test/**/*.js --reporter mochawesome"
+  }
+}
